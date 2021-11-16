@@ -1,0 +1,59 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1480380799266-582d808d748a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+  background-size: contain;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  background:#00FF7F;
+  color: #ffa260
+  border:1px;
+  padding: 0.2em 0.2em;
+  font-size:large;
+
+}
+button:hover{
+  border-color: #00FFFF;
+  color: #FFFAFA	;
+  box-shadow:0 1em 1em --0.5em #00FFFF;
+  transform:translateY(0.15em);
+  cursor: pointer;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #20B2AA;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #20B2AA;
+}
